@@ -347,3 +347,114 @@ body {
         gap: 1rem;
     }
 }
+
+/* --- ESTILOS PARA A GALERIA DE PRODUTOS --- */
+
+.gallery-container {
+    padding: 0 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+    
+    /* Lógica para esconder/mostrar com animação */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.7s ease-in-out, opacity 0.5s ease-in-out 0.2s, margin-top 0.7s ease-in-out;
+}
+
+.product-gallery.show {
+    max-height: 1000px; /* Um valor alto para caber as imagens */
+    opacity: 1;
+    margin-top: 2rem;
+}
+
+.product-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 2px solid var(--gold);
+}
+
+/* Estilo opcional para destacar o card ativo */
+.product-card {
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+}
+
+.product-card.active {
+    border-color: var(--gold);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.15);
+}
+
+/* --- SEÇÃO DE SERVIÇOS --- */
+.services {
+    padding: 6rem 0; /* Padding vertical, horizontal será controlado pelo container do swiper */
+    background-color: #1a1a1a; /* Um fundo um pouco diferente para destacar a seção */
+}
+
+.services-carousel {
+    width: 100%;
+    padding: 2rem 5%; /* Espaçamento nas laterais */
+}
+
+.service-card {
+    background-color: var(--black-bg);
+    border: 1px solid #222;
+    border-radius: 5px;
+    padding: 2.5rem 1.5rem;
+    height: 300px; /* Altura fixa para todos os cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--gold);
+}
+
+.service-card i {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.service-card p {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/* --- ESTILIZAÇÃO DOS CONTROLES DO SWIPER --- */
+.services-carousel .swiper-pagination-bullet {
+    background-color: rgba(212, 175, 55, 0.5); /* Cor das bolinhas inativas */
+}
+
+.services-carousel .swiper-pagination-bullet-active {
+    background-color: var(--gold); /* Cor da bolinha ativa */
+}
+
+.services-carousel .swiper-button-next,
+.services-carousel .swiper-button-prev {
+    color: var(--gold); /* Cor das setas */
+    transition: transform 0.2s ease;
+}
+
+.services-carousel .swiper-button-next:hover,
+.services-carousel .swiper-button-prev:hover {
+    transform: scale(1.2); /* Efeito de zoom ao passar o mouse */
+}
