@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 
@@ -29,7 +30,6 @@
                 <li class="nav-item"><a href="#produtos" class="nav-link">Produtos</a></li>
                 <li class="nav-item"><a href="#servicos" class="nav-link">Serviços</a></li>
                 <li class="nav-item"><a href="#contato" class="nav-link">Contato</a></li>
-                <li class="nav-item"><a href="#sobre" class="nav-link">Sobre Nós</a></li>
             </ul>
         </nav>
         <div class="hamburger">
@@ -50,31 +50,103 @@
         </section>
 
         <section class="products" id="produtos">
-            <h2 class="section-title">Nossas Soluções</h2>
-            <div class="products-container">
-                <div class="product-card">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <h3>Vidros Temperados</h3>
-                    <p>Segurança e elegância para portas, janelas e fachadas.</p>
-                </div>
-                <div class="product-card">
-                    <i class="fa-solid fa-clone"></i>
-                    <h3>Espelhos</h3>
-                    <p>Amplie e ilumine seus espaços com espelhos sob medida.</p>
-                </div>
-                <div class="product-card">
-                    <i class="fa-solid fa-shower"></i>
-                    <h3>Box para Banheiro</h3>
-                    <p>Design moderno e funcionalidade para o seu banheiro.</p>
-                </div>
-                <div class="product-card">
-                    <i class="fa-solid fa-window-maximize"></i>
-                    <h3>Persianas</h3>
-                    <p>Controle de luz e privacidade com persianas de alta qualidade.</p>
+    <h2 class="section-title">Nossas Soluções</h2>
+    <div class="products-container">
+        <div class="product-card" data-gallery="vidros">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Vidros Temperados</h3>
+            <p>Segurança e elegância para portas, janelas e fachadas.</p>
+        </div>
+        <div class="product-card" data-gallery="espelhos">
+            <i class="fa-solid fa-clone"></i>
+            <h3>Espelhos</h3>
+            <p>Amplie e ilumine seus espaços com espelhos sob medida.</p>
+        </div>
+        <div class="product-card" data-gallery="box">
+            <i class="fa-solid fa-shower"></i>
+            <h3>Box para Banheiro</h3>
+            <p>Design moderno e funcionalidade para o seu banheiro.</p>
+        </div>
+        <div class="product-card" data-gallery="persianas">
+            <i class="fa-solid fa-window-maximize"></i>
+            <h3>Persianas</h3>
+            <p>Controle de luz e privacidade com persianas de alta qualidade.</p>
+        </div>
+    </div>
+
+    <div class="gallery-container">
+        <div id="vidros-gallery" class="product-gallery">
+            <img src="https://via.placeholder.com/300x200.png?text=Vidro+1" alt="Exemplo de Vidro Temperado 1">
+            <img src="https://via.placeholder.com/300x200.png?text=Vidro+2" alt="Exemplo de Vidro Temperado 2">
+            <img src="https://via.placeholder.com/300x200.png?text=Vidro+3" alt="Exemplo de Vidro Temperado 3">
+        </div>
+
+        <div id="espelhos-gallery" class="product-gallery">
+            <img src="https://via.placeholder.com/300x200.png?text=Espelho+1" alt="Exemplo de Espelho 1">
+            <img src="https://via.placeholder.com/300x200.png?text=Espelho+2" alt="Exemplo de Espelho 2">
+        </div>
+
+        <div id="box-gallery" class="product-gallery">
+            <img src="https://via.placeholder.com/300x200.png?text=Box+1" alt="Exemplo de Box 1">
+            <img src="https://via.placeholder.com/300x200.png?text=Box+2" alt="Exemplo de Box 2">
+            <img src="https://via.placeholder.com/300x200.png?text=Box+3" alt="Exemplo de Box 3">
+            <img src="https://via.placeholder.com/300x200.png?text=Box+4" alt="Exemplo de Box 4">
+        </div>
+
+        <div id="persianas-gallery" class="product-gallery">
+            <img src="https://via.placeholder.com/300x200.png?text=Persiana+1" alt="Exemplo de Persiana 1">
+            <img src="https://via.placeholder.com/300x200.png?text=Persiana+2" alt="Exemplo de Persiana 2">
+        </div>
+    </div>
+</section>
+    </main>
+
+    <section class="services" id="servicos">
+    <h2 class="section-title">Nossos Serviços</h2>
+
+    <div class="swiper services-carousel">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="service-card">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <h3>Medição e Orçamento</h3>
+                    <p>Nossa equipe vai até você para fazer medições precisas e oferecer um orçamento detalhado sem compromisso.</p>
                 </div>
             </div>
-        </section>
-    </main>
+
+            <div class="swiper-slide">
+                <div class="service-card">
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3>Instalação Profissional</h3>
+                    <p>Contamos com instaladores experientes que garantem uma montagem rápida, segura e com acabamento perfeito.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="service-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h3>Manutenção e Reparos</h3>
+                    <p>Oferecemos suporte completo para manutenção de persianas e reparos em vidros, garantindo maior durabilidade.</p>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="service-card">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Consultoria de Design</h3>
+                    <p>Ajudamos você a escolher as melhores soluções em vidros e persianas que harmonizam com seu ambiente.</p>
+                </div>
+            </div>
+
+            </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
 
     <footer class="footer" id="contato">
         <div class="logo-footer">
@@ -91,6 +163,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/Script/script.js"></script>
 
 </body>
