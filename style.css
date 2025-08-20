@@ -162,37 +162,32 @@ body {
     color: var(--black-bg);
 }
 
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+
 .header .logo img {
-    height: 50px; /* Ajuste a altura conforme necessário */
-    margin-right: 10px; /* Espaço entre a logo e o texto */
-    vertical-align: middle; /* Alinhar verticalmente com o texto */
-    }
-    
-    .header .logo {
-        display: flex; /* Mantém a imagem e a div com o texto lado a lado */
-        align-items: center; /* Alinha verticalmente a imagem e a div de texto */
-        }
+    height: 50px; /* Altura padrão da logo */
+    margin-right: 15px;
+    transition: height 0.3s ease; /* Animação suave */
+}
+
+.header .logo > div h1 {
+    color: var(--gold);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
         
-        .header .logo img {
-        height: 60px; /* Ajuste a altura conforme necessário */
-        margin-right: 10px; /* Espaço entre a logo e o texto */
-        }
-        
-        .header .logo > div h1 { /* Estiliza o H1 dentro da div */
-        color: var(--gold);
-        font-size: 2rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin-bottom: 0; /* Remove a margem padrão abaixo do H1 */
-        }
-        
-        .header .logo > div p { /* Estiliza o P dentro da div */
-        color: var(--text-light);
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        display: block; /* Força o parágrafo a ocupar uma nova linha abaixo do H1 */
-        }
+.header .logo > div p {
+    color: var(--text-light);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+}
 
 /* --- SEÇÃO DE PRODUTOS --- */
 .products {
@@ -304,6 +299,11 @@ body {
 
 /* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
 @media(max-width: 768px) {
+    .header .logo img {
+    height: 40px; /* Altura menor da logo para celulares */
+    margin-right: 10px;
+    }
+
     .hamburger {
         display: block;
     }
@@ -394,9 +394,11 @@ body {
 }
 
 /* --- SEÇÃO DE SERVIÇOS --- */
+/* --- SEÇÃO DE SERVIÇOS --- */
 .services {
-    padding: 6rem 0; /* Padding vertical, horizontal será controlado pelo container do swiper */
-    background-color: #1a1a1a; /* Um fundo um pouco diferente para destacar a seção */
+    padding: 6rem 0;
+    background-color: #1a1a1a;
+    text-align: center; /* <-- ADICIONE ESTA LINHA */
 }
 
 .services-carousel {
